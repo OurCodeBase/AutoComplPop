@@ -23,7 +23,7 @@ Once this plugin is installed, auto-popup is enabled at startup by default.
 
 Which completion method is used depends on the text before the cursor. The
 default behavior is as follows:
-```
+```vim
    kind      filetype    text before the cursor ~
    Keyword   *           two keyword characters
    Filename  *           a filename character + a path separator 
@@ -42,7 +42,7 @@ default behavior is as follows:
 
 Also, you can make user-defined completion and snipMate's trigger completion
 
-To enable auto-popup for this completion, add these lines to the last of the file `plugin/snipMate.vim`
+To enable auto-popup for this completion, add these lines to the last of the file `~/.vim/bundle/snipmate.vim/plugin/snipMate.vim`
 ```vim
 fun! GetSnipsInCurrentScope()
   let snips = {}
@@ -54,13 +54,13 @@ fun! GetSnipsInCurrentScope()
 endf
 ```
 
-And add the following line to `.vimrc`
+And add the following line to `~/.vimrc`
 ```vim
 let g:acp_behaviorSnipmateLength=1
 ```
 
 To use AutoComplPop with only snipmate (AutoComplPop will not use keywords used in current file)
-Add the following line to `.vimrc`
+Add the following line to `~/.vimrc`
 ```vim
 let g:acp_behaviorKeywordLength=-1
 ```
